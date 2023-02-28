@@ -1,29 +1,29 @@
 #!/bin/bash
 
-echo "Atualizando o servidor..."
+echo "Updating the server..."
 
-apt update -y
-apt upgrade -y
+apt-get update 
+apt-get upgrade -y
 
-echo "Instalando o apache2..."
+echo "Installing apache2..."
 
-apt install apache2 -y
+apt-get install apache2 -y
 
-echo "Instalando o unzip..."
+echo "Installing unzip..."
 
-apt install unzip -y
+apt-get install unzip -y
 
-echo "Baixando a aplicação no diretório /tmp..."
+echo "Installing application on folder /tmp..."
 
 cd /tmp
 wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip
 
-echo "Copiando arquivos da aplicação no diretório padrão do apache"
+echo "Copying application's files on default apache's folder"
 
 rm /var/www/html/index.html
 unzip main.zip
 cd linux-site-dio-main
-cp * /var/www/html
+cp -R * /var/www/html
 
-
+echo "The script is Done!!"
 
