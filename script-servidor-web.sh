@@ -7,11 +7,11 @@ apt upgrade -y
 
 echo "Instalando o apache2..."
 
-apt install apache2
+apt install apache2 -y
 
 echo "Instalando o unzip..."
 
-apt install unzip
+apt install unzip -y
 
 echo "Baixando a aplicação no diretório /tmp..."
 
